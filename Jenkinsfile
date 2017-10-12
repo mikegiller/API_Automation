@@ -4,14 +4,15 @@ node {
         build 'SoapUI NG Pro functional test'
     } catch (all) {
         // doing some cleanup for stage one
-        throw new Exception("Stage One failed!")
+        echo "Stage One failed!"
+        throw
     }  
 
 try {
         stage "Performance API tests"
         build 'LoadUI'
     } catch (all) {
-        // doing some cleanup for stage two
-        throw new Exception("Stage Two failed!")
+        echo "Stage Two failed!"
+        throw
     } 
 }
