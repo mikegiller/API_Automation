@@ -5,7 +5,7 @@ node {
     } catch (all) {
         // doing some cleanup for stage one
         echo "Stage One failed!"
-        throw
+        throw all
     }  
 
 try {
@@ -13,6 +13,6 @@ try {
         build 'LoadUI'
     } catch (all) {
         echo "Stage Two failed!"
-        throw
+        throw all
     } 
 }
