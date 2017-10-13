@@ -1,0 +1,22 @@
+
+<h2>CreateSourceExample</h2>
+<ul class="parameter">
+  <li class="param-required-">id : String
+    <br/>A unique identifier for this source.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">type : String
+    <br/>The payment type of the source. The payment type will correspond to another element in the source response that contains detailed information specific to the type. For example, a type of &#x60;creditCard&#x60; indicates that there is an object in the response named &#x60;creditCard&#x60; that will contain card-specific data. Possible values are: * creditCard * wireTransfer 
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">usage : String
+    <br/>The usage type of the source. Depending on the value, the source can be used only once, or it can be reused multiple times. Possible values are: * single * multiple 
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">status : String
+    <br/>The current status of the source. Only a source with a &#x60;chargeable&#x60; status can be used to create a charge. Possible values are: * chargeable * pending * cancelled * failed 
+  </li>
+</ul>
